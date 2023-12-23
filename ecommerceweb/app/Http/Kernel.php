@@ -19,8 +19,11 @@ class Kernel extends HttpKernel
         \Illuminate\Http\Middleware\HandleCors::class,
         \App\Http\Middleware\PreventRequestsDuringMaintenance::class,
         \Illuminate\Foundation\Http\Middleware\ValidatePostSize::class,
+        \Illuminate\Session\Middleware\StartSession::class, // add session
+
         \App\Http\Middleware\TrimStrings::class,
         \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
+        \App\Http\Middleware\UserAuth::class, //create UserAuth by terminal "php artisan make:middleware UserAuth"
     ];
 
     /**
