@@ -30,10 +30,15 @@
             
             <button class="btn btn-primary">Buy Now</button> -->
             <div class="action">
-							<button class="add-to-cart btn btn-success" type="button">Add to cart</button>
-                            <button class="btn btn-primary">Buy Now</button>
-							<button class="like btn btn-default" type="button"><span class="fa fa-heart"></span></button>
-						</div>
+                <form action="/add_to_cart" method="POST">
+                    
+                    <input type="hidden" name="product_id" value="{{$product['id']}}">
+                    @csrf
+                <button class="add-to-cart btn btn-success">Add to cart</button>
+                </form>
+                <button class="btn btn-primary">Buy Now</button>
+                <button class="like btn btn-default" type="button"><span class="fa fa-heart"></span></button>
+            </div>
         </div>
     </div>
 </div>
