@@ -1,3 +1,11 @@
+<?php
+use App\Http\Controllers\ProductController;
+$total = 0;
+if(Session::has('user')){
+  $total = ProductController::cartItem();
+}
+
+?>
 <nav class="navbar navbar-expand-lg navbar-light bg-info color-white">
   <a class="navbar-brand" href="#">Navbar</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -12,19 +20,25 @@
       <li class="nav-item">
         <a class="nav-link" href="#">Order</a>
       </li>
+      @if(Session::has('user'))
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
+          {{Session::get('user')['name']}}
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="/logout">LogOut</a>
           <a class="dropdown-item" href="#">Another action</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">Something else here</a>
         </div>
       </li>
+      @else
       <li class="nav-item">
-        <a class="nav-link disabled" href="#">Add to cart</a>
+        <a class="nav-link" href="/login">Login</a>
+      </li>
+      @endif
+      <li class="nav-item">
+        <a class="nav-link" href="#">Cart Item({{$total}})</a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0" action="/search">
