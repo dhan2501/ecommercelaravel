@@ -38,7 +38,7 @@ if(Session::has('user')){
       </li>
       @endif
       <li class="nav-item">
-        <a class="nav-link" href="#">Cart Item({{$total}})</a>
+        <a class="nav-link" href="/cartlist">Cart Item({{$total}})</a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0" action="/search">

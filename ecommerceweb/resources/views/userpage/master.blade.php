@@ -51,6 +51,44 @@
         padding: 3em;
         line-height: 1.5em; 
       }
+
+
+
+      .mr-2{
+  margin-right: 20px;
+}
+
+.divTable{
+	display: table;
+	width: 100%;
+}
+.rowTable {
+	display: table-row;
+}
+.divTableHeading {
+	display: table-header-group;
+}
+.divTableCol, .divTableHead {
+	border-bottom: 1px solid #eee;
+	display: table-cell;
+	padding: 3px 10px;
+}
+.divTableHeading {
+	background-color: #EEE;
+	display: table-header-group;
+	font-weight: bold;
+}
+.divTableFoot {
+	background-color: #EEE;
+	display: table-footer-group;
+	font-weight: bold;
+}
+.divTableBody {
+	display: table-row-group;
+}
+.listing{
+  padding: 10px;
+}
     </style>
   </head>
   <body>
