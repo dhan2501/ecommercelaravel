@@ -1,32 +1,6 @@
 @extends("userpage/master") @section("content")
 
 <div class="container custom-product">
-   <!-- <div class="trending-wrapping">
-        <div class="heading container-fluid">
-            <span style="color: white;margin: 10px 0 0 -5px;  font-family: 'Quicksand', sans-serif;position: relative;top: 6px">Cart List</span>
-        </div>
-            @foreach($products as $item)
-            <div class="row searched-item">
-                <div class="col-sm-3">
-                    <a href="detail/{{$item->id}}">
-                        <img class="trending-img" src="{{$item->gallery}}" class="d-block w-100" alt="...">
-                    </a>
-                </div>
-                <div class="col-sm-3">
-                    <div class="">
-                        <h4>{{$item->name}}</h4>
-                        <h4>{{$item->description}}</h4>
-                    </div>
-                    
-                </div>
-                <div class="col-sm-3">
-                    <div class="">
-                        <button class="btn btn-warrning">Remove From Cart</button>
-                    </div>
-                </div>
-            </div>
-            @endforeach
-   </div> -->
 
    <div class="text-center">
             <h5>Cart Items</h5>
@@ -61,7 +35,7 @@
             <div class="divTableCol"><strong>&#x20B9; {{$item->price}}</strong></div>
             <!-- <div class="divTableCol"><strong>€170.01</strong></div> -->
             <div class="divTableCol">
-                <button type="button" class="btn btn-danger"><span class="fa fa-remove"></span> Remove</button>
+                <a href="/removecart/{{$item->cart_id}}"><button type="button" class="btn btn-danger"><span class="fa fa-remove"></span> Remove Cart</button></a>
             </div>
         </div>
         @endforeach
