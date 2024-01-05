@@ -17,7 +17,7 @@
         </div>
     
         @foreach($products as $item)
-        <div class="rowTable">
+        <div class="rowTable mt-2">
             <div class="divTableCol">
                 <div class="media">
                     <a class=" pull-left mr-2 ml-0" href="detail/{{$item->id}}"> <img class="img-fluid" src="{{$item->gallery}}" style="width: 92px; height: 72px; margin-left: 0" /></a>
@@ -40,6 +40,9 @@
         </div>
         @endforeach
         
+</div>
+<div class="ordernow mt-3">
+    <a class="btn btn-success" href="/ordernow">Order Now</a>
 </div>
 
 </div>

@@ -89,6 +89,9 @@
 .listing{
   padding: 10px;
 }
+.ordernow {
+    float: right;
+}
     </style>
   </head>
   <body>
